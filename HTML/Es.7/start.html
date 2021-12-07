@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+	<form action="#" method="post">
+		<h1>Iscrizione alla piattaforma</h1>
+		<section>
+			<h2>Dati anagrafici</h2>
+
+			<!-- #1 EMAIL -->
+			<div>
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email">
+			</div>
+
+			<!-- #2 PASSWORD -->
+			<div>
+				<label for="pwd">Password:</label>
+				<input type="password" id="pwd" name="pwd" minlength="8">
+			</div>
+
+			<!-- #3 NOME E COGNOME -->
+			<div>
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="name">
+			</div>
+			<div>
+				<label for="cognome">Cognome:</label>
+				<input type="text" id="cognome" name="surname">
+			</div>
+
+			<!-- #4 DATA DI NASCITA -->
+			<div>
+				<label for="bday">Data di nascita</label>
+				<input type="date" id="bday" name="birthdate">
+			</div>
+
+			<!-- #5 NUMERO DI TELEFONO -->
+			<div>
+				<label for="telefono">Numero di telefono:</label>
+				<input type="text" id="telefono" name="phone-number" pattern="[0-9]" title="Solo caratteri numerici">
+			</div>
+		</section>
+
+		<section>
+			<h2>Tipologia di abbonamento</h2>
+
+			<!-- #6 PIANO ABBONAMENTO -->
+			<div>
+				<label for="piano-abbonamento">Scegli il tuo abbonamento</label>
+				<select name="subscription-plan" id="piano-abbonamento">
+					<option value="free">Piano FREE</option>
+					<optgroup label="A pagamento">
+						<option value="first-price">Piano SILVER - 8.90€ al mese</option>
+						<option value="second-price">Piano GOLD - 14.90€ al mese</option>
+						<option value="third-price">Piano PLATINUM - 19.90€ al mese</option>
+					</optgroup>
+				</select>
+			</div>
+			<br>
+
+			<!-- #7 VANTAGGI PRO -->
+			<fieldset>
+				<legend>Abbonamento PRO</legend>
+				<p>Se decidi di sottoscrivere l'abbonamento PRO avrai diritto a vantaggi esclusivi al costo di soli
+					3.99€ in più al mese!</p>
+				<p>Cosa comprende l'abbonamento PRO:
+				<ul>
+					<li>Rimozione di tutti i banner pubblicitari</li>
+					<li>Spedizione gratuita dei nostri prodotti</li>
+				</ul>
+				</p>
+				<span>Desideri sottoscrivere l'abbonamento?</span>
+				<label for="PRO-sub-yes">Si</label>
+				<input type="radio" id="PRO-sub-yes" name="PRO-sub" value="yes">
+
+				<label for="PRO-sub-no">No</label>
+				<input type="radio" id="PRO-sub-no" name="PRO-sub" value="no">
+			</fieldset>
+		</section>
+
+		<section>
+			<h2>Carta di credito</h2>
+
+			<!-- #8 CARTA DI CREDITO -->
+			<div>
+				<label for="numero-carta">Numero carta:</label>
+				<input type="text" id="numero-carta" name="credit-card-num" pattern="[0-9]{13,16}" title="Il numero della carta di credito deve contenere da 13 a 16 cifre.">
+			</div>
+			<div>
+				<label for="cvc">CVC:</label>
+				<input type="text" id="cvc" name="CVC" pattern="[0-9]{3}" title="Codice numerico di 3 cifre presente sul retro della carta.">
+			</div>
+			<div>
+				<label for="scadenza">Scadenza:</label>
+				<input type="date" id="scadenza" name="expire-date" min="2021-12-01">
+			</div>
+		</section>
+
+		<section>
+			<!-- #9 INDIRIZZO FATTURAZIONE -->
+			<h2>Idirizzo di fatturazione</h2>
+			<div>
+				<label for="paese">Paese:</label>
+				<input type="text" id="paese" name="country">
+			</div>
+			<div>
+				<label for="città">Città:</label>
+				<input type="text" id="città" name="city">
+			</div>
+			<div>
+				<label for="via">Via:</label>
+				<input type="text" id="via" name="route">
+			</div>
+			<div>
+				<label for="numero-civico">Numero civico:</label>
+				<input type="text" id="numero-civico" name="civic-number">
+			</div>
+			<div>
+				<label for="CAP">CAP:</label>
+				<input type="text" id="CAP" name="CAP" pattern="[0-9]{5}" title="Il CAP è formato da cinque cifre.">
+			</div>
+		</section>
+		<br>
+		<!-- SUBMIT -->
+		<button type="submit">Invia</button>
+	</form>
+
+</body>
+</html>
