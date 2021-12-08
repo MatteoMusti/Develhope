@@ -7,7 +7,7 @@ body {
 }
 
 .expandable {
-	visibility: collapse;
+	visibility: visible;
 	background: gray;
 	color: white;
 }
