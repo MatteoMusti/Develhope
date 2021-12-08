@@ -119,14 +119,12 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #zero {
     grid-area: zero;
     border-bottom-left-radius: 12px;
     border-bottom: 0;
-
 } 
 
 .operatore {
