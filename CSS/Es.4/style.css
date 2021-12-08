@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    padding: 50px;
+    font-family: sans-serif;
+}
+
+.calculator {
+    width: 378px;
+    height: 386px;
+    padding: 0;
+    box-shadow: 2px 2px 8px grey;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "calcoli calcoli calcoli calcoli"
+    "plus minus multiply divide"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero dot AC equal";
+}
+
+div {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 18px;
+    border-bottom: 2px solid rgba(72, 101, 138, 0.719);
+    border-right: 2px solid rgba(72, 101, 138, 0.719);   
+}
+
+#calcoli {
+    grid-area: calcoli;
+    background-color: rgb(68, 75, 82);
+    color: white;
+    font-size: 1.8em;
+    padding: 10px 15px;
+    border: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#uno {
+    grid-area: one;
+}
+
+#due {
+    grid-area: two;
+}
+
+#tre {
+    grid-area: three;
+}
+
+#quattro {
+    grid-area: four;
+}
+
+#cinque {
+    grid-area: five;
+}
+
+#sei {
+    grid-area: six;
+}
+
+#sette {
+    grid-area: seven;
+}
+
+#otto {
+    grid-area: eight;
+}
+
+#nove {
+    grid-area: nine;
+}
+
+#più {
+    grid-area: plus;
+}
+
+#meno {
+    grid-area: minus;
+}
+
+#per {
+    grid-area: multiply;
+}
+
+#diviso {
+    grid-area: divide;
+    border-right: 0;
+}
+
+#punto {
+    grid-area: dot;
+    border-bottom: 0;
+}
+
+#ac {
+    grid-area: AC;
+    border-bottom: 0;
+}
+
+#uguale {
+    grid-area: equal;
+    background-color: rgb(231, 108, 114);
+    border-bottom-right-radius: 12px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#zero {
+    grid-area: zero;
+    border-bottom-left-radius: 12px;
+    border-bottom: 0;
+} 
+
+.operatore {
+    background-color: rgba(112, 157, 168, 0.329);
+}
