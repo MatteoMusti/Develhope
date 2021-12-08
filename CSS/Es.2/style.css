@@ -7,7 +7,7 @@ body {
 }
 
 .expandable {
-	visibility: visible;
+	visibility: collapse;
 	background: gray;
 	color: white;
 }
@@ -20,4 +20,30 @@ body {
 	border: 1px solid;
 	border-radius: 3px;
 	transition: 0.3s;
+	cursor: pointer;
 } 
+
+#close-btn {
+	visibility: hidden;
+}
+
+#expand-toggle:checked + table > tbody > .expandable {
+	visibility: visible;
+}
+
+#expand-toggle:checked ~ #expand-btn {
+	display: none;
+}
+
+#expand-toggle:checked ~ #close-btn {
+	visibility: visible;
+	display: inline-block;
+	margin-top: 12px;
+	padding: 6px 12px;
+	background-color: #88ff88;
+	border: 1px solid;
+	border-radius: 3px; 
+	cursor: pointer;
+}
+
+
