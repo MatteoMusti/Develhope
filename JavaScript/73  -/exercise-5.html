@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+
+    <script>
+      function addRow() {
+        let table = document.getElementById("person-table");
+        let row = table.insertRow(-1);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        cell1.innerHTML = '<label>firstName:</label> <input type="text">';
+        cell2.innerHTML = '<label>lastName:</label> <input type="text">';
+        cell3.innerHTML = '<label>age:</label> <input type="text">';
+      }
+
+      const button = document.getElementById("add-row");
+      button.onclick = addRow;
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+
+    <script>
+      let postFetched;
+
+      const btnFetch = document.getElementById("fetch-post");
+      const title = document.getElementById("post-title");
+
+      btnFetch.onclick = function () {
+        postFetched = JSON.parse(localStorage.getItem("post"));
+        title.append(postFetched.title);
+      };
+    </script>
+  </body>
+</html>
