@@ -53,15 +53,15 @@ class User implements Person {
     companies: Company[],
     gender: Gender
   ) {
-    (this.id = id),
-      (this.name = name),
-      (this.surname = surname),
-      (this.age = age),
-      (this.dateOfBirth = dateOfBirth),
-      (this.address = address),
-      (this.role = role),
-      (this.username = username),
-      (this.gender = gender);
+    this.id = id,
+    this.name = name,
+    this.surname = surname,
+    this.age = age,
+    this.dateOfBirth = dateOfBirth,
+    this.address = address,
+    this.role = role,
+    this.username = username,
+    this.gender = gender;
     this.companies = companies;
   }
 
