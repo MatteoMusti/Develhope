@@ -1,44 +1,44 @@
 type Role = "staff" | "student" | "manager" | "admin";
 type Gender = "male" | "female" | "other";
 
-interface Place {
+interface IPlace {
   city: string;
   street: string;
   postalCode: string;
 }
 
-interface Company {
+interface ICompany {
   id: number;
   name: string;
   description?: string;
-  location: Place;
+  location: IPlace;
 }
 
-interface Person {
+interface IPerson {
   id: number;
   name: string;
   surname: string;
   age: number;
   dateOfBirth: string;
-  address: Place;
+  address: IPlace;
   role: Role;
   username: string;
   profilePhotoUrl?: string;
-  companies: Company[];
+  companies: ICompany[];
   gender: Gender;
 }
 
-class User implements Person {
+class User implements IPerson {
   id: number;
   name: string;
   surname: string;
   age: number;
   dateOfBirth: string;
-  address: Place;
+  address: IPlace;
   role: Role;
   username: string;
   profilePhotoUrl?: string;
-  companies: Company[];
+  companies: ICompany[];
   gender: Gender;
 
   constructor(
@@ -47,21 +47,21 @@ class User implements Person {
     surname: string,
     age: number,
     dateOfBirth: string,
-    address: Place,
+    address: IPlace,
     role: Role,
     username: string,
-    companies: Company[],
+    companies: ICompany[],
     gender: Gender
   ) {
-    (this.id = id),
-      (this.name = name),
-      (this.surname = surname),
-      (this.age = age),
-      (this.dateOfBirth = dateOfBirth),
-      (this.address = address),
-      (this.role = role),
-      (this.username = username),
-      (this.gender = gender);
+    this.id = id,
+    this.name = name,
+    this.surname = surname,
+    this.age = age,
+    this.dateOfBirth = dateOfBirth,
+    this.address = address,
+    this.role = role,
+    this.username = username,
+    this.gender = gender;
     this.companies = companies;
   }
 

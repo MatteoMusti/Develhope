@@ -8,7 +8,7 @@ const obj = {
     name: 'Mario',
     surname: 'Rossi',
     age: 30,
-    dateOfBirth: '1995/12/14'
+    dateOfBirth: '1995/12/14',
     address: {
         city: 'Roma',
         street: 'Via roma 10',
