@@ -1,6 +1,6 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(4, 1fr);
 }
 
@@ -22,6 +22,7 @@ body {
 #red {
     grid-column: 2/3;
     grid-row: 3/4;
+
 }
 
 #green {
@@ -29,6 +30,7 @@ body {
     grid-row: 4/5;
 }
 
+/* yellow elements */
 #yellow ul {
     display: flex;
 }
@@ -39,4 +41,15 @@ body {
 
 #yellow ul li:first-child {
     flex: 3 1 0%;
+}
+
+/* Red elements */
+#red ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+#red ul li {
+    flex: 1 1 0%;
 }
